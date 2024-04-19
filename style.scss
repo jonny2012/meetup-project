@@ -1,0 +1,27 @@
+@use 'adaptive';
+@use 'hero';
+@use 'header';
+@use'vars';
+@use 'events';
+@use 'meetup_info';
+@use 'friendship';
+@use 'footer';
+
+:root{
+    image-rendering: pixelated;
+
+   
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #212121;
+}
+body{
+    margin: 0  auto;
+}
+
+

@@ -1,0 +1,38 @@
+:root {
+    a:hover {
+        text-decoration: underline;
+    }
+
+    span {
+        font-size: 14px;
+        color: rgba(112, 112, 112, 1);
+    }
+
+    image-rendering: pixelated;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    color: #212121;
+}
+$blue-color: #00798A;
+
+h1{
+    font-size: 42px;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(0, 121, 138, 1);
+    }
+    a:hover{
+        text-decoration: underline 2px;
+      }
+
+p{
+    color:rgba(33, 33, 33, 1);
+    font-size: 16px;
+}

@@ -1,0 +1,240 @@
+@use 'vars';
+@use 'adaptive';
+
+.events {
+    width: 100vw;
+    margin: 0 auto;
+
+    .container {
+        max-width: 1512px;
+        padding: 0 158px;
+        margin: 0 auto;
+    }
+
+    .events__bar {
+        height: 64px;
+        display: flex;
+        justify-content: space-between;
+        ;
+
+
+        &--left {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+
+            h2 {
+                font-size: 28px;
+                margin-right: 10px;
+                margin-top: 5px;
+
+                @media (max-width: 768px) {
+                    font-size: 18px;
+
+                }
+            }
+
+            .event_input {
+                position: relative;
+
+                input {
+                    max-width: 240px;
+                    height: 44px;
+                    border: none;
+                    outline: none;
+                    padding: 10px 40px 10px 12px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border-radius: 8px;
+                    color: #00798A;
+                    background-color: rgba($color: #00798A, $alpha: 0.2);
+
+                    @media (max-width: 768px) {
+                        font-size: 12px;
+                        width: 163px;
+                        height: 30px;
+
+                    }
+                }
+
+                .input-btn {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    border: none;
+                    background-color: rgba($color: #00798A, $alpha: 0);
+                    cursor: pointer;
+
+                    @media (max-width: 768px) {
+                        top: 0;
+                        right: 0;
+
+                    }
+                }
+            }
+        }
+
+        a {
+            color: #00798A;
+            font-weight: 500;
+            margin-top: 20p;
+
+        }
+
+    }
+
+    .events__cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        flex-wrap: wrap;
+
+        .card {
+            width: 272px;
+
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            img {
+                width: 100%;
+                height: 153px;
+            }
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                h3 {
+                    font-size: 20px;
+                    text-align: start;
+                    padding-right: 50px;
+                }
+
+                span {
+                    color: #707070;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                .time {
+                    text-transform: uppercase;
+                    color: #212121;
+                    position: relative;
+                    margin-left: 25px;
+                    display: block;
+                }
+
+                .time:before {
+                    content: url(/img/calendar.svg);
+                    margin-right: 5px;
+                    position: absolute;
+                    height: 20px;
+                    bottom: -1px;
+                    left: -25px;
+
+                }
+
+                .goings {
+                    position: relative;
+                    padding-left: 25px;
+                    margin-right: 10px;
+                }
+
+                .goings::before {
+                    content: (url(/img/goings.svg));
+                    position: absolute;
+                    left: 0;
+
+                }
+
+                .ticket {
+                    position: relative;
+                    padding-left: 25px;
+                }
+
+                .ticket::before {
+                    content: (url(/img/ticket.svg));
+                    position: absolute;
+                    left: 0;
+
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 10px 20px;
+
+
+        .events__cards {
+            justify-content: flex-start;
+            margin-bottom: 30px;
+
+            .card {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #707070;
+
+                img {
+                    width: 97px;
+                    height: 66px;
+                }
+
+                &__text {
+                    gap: 7px;
+
+                    h3 {
+                        font-size: 10px;
+                    }
+
+                    span {
+                        font-size: 9px;
+                    }
+
+                    .time {
+                        font-size: 9px;
+                        margin: 0;
+                        order: -1;
+
+                        &:before {
+                            content: '';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 892px) {
+    .events {
+        .container {
+            padding: 50px 20px;
+
+
+
+            .events__cards {
+                justify-content: start;
+            }
+
+            .events__bar {
+                align-items: start;
+
+                a {
+                    display: none;
+                }
+            }
+
+        }
+    }
+}

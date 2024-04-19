@@ -1,0 +1,176 @@
+@use 'vars';
+
+.meetup_info {
+
+    max-width: 1512px;
+    padding: 0 158px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    @media (max-width: 956px) {
+       padding: 0 20px;
+    }
+
+    .signup {
+        display: flex;
+        margin: 36px 56px;
+        @media (max-width: 956px) {
+            flex-direction: column;
+            align-items: center;
+            gap:20px;
+            position: relative;
+        }
+        img{
+            @media (max-width: 956px) {
+              order: -3;
+            }
+        }
+
+        &--text {
+
+            @media (max-width: 956px) {
+              text-align: center;
+              h2{
+                order: -1;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+ 
+
+            p {
+                max-width: 664px;
+                @media (max-width: 956px) {
+                 order: -1;
+                }
+            }
+
+            .signup_btn {
+                width: 192px;
+                height: 40px;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 8px 66px;
+                border: none;
+                color: #fff;
+                border-radius: 8px;
+                background-color: rgba(227, 35, 89, 1);
+                @media (max-width: 956px) {
+                   align-self: center;
+                   order: 10;
+                    
+                }
+            }
+        }
+    }
+
+    .categories {
+        margin-bottom: 32px;
+
+        h2 {
+            margin-bottom: 24px;
+
+        }
+
+        &--items {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        justify-content: center;
+           
+
+            .category {
+                width: 135px;
+                height: 112px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+
+                .text {
+                    font-size: 16px;
+                    text-align: center;
+                    margin: 0 19px 16px 19px;
+                }
+            }
+        }
+
+
+
+
+    }
+
+    .cities {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 32px;
+
+        p {
+            color: rgba(112, 112, 112, 1);
+        }
+
+        &__images {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+
+            .city {
+                width: 205px;
+                height: 260px;
+                text-align: center;
+
+                h4 {
+                    margin-top: 28px;
+                }
+
+            }
+        }
+    }
+
+    .how_it_works {
+        margin-bottom: 64px;
+        .boxes {
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 1000px) {
+               flex-wrap: wrap;
+            }
+            .items__box {
+            
+                display: flex;
+                padding: 32px 112px 24px 24px;
+                @media (max-width: 768px) {
+
+                        padding: 30px 20px;
+                        width: 100%;
+                }
+
+                img {
+                    width: 41px;
+                    margin-right: 24px;
+                    padding-bottom: 90px;
+
+                }
+
+                &--text {
+                   
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+
+            }
+        }
+    }
+    
+}
+
